@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set home = get_section(path="home/_index.md") %}
+{% for p in home.pages %}
+  {% if p.extra.kind == "hero" %}
+    {% include "home/hero.html" %}
+  {% endif %}
+{% endfor %}
+{% endblock content %}
