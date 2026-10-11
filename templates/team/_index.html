@@ -3,10 +3,10 @@
 {% block content %}
   
 <section class="two-col">
-{% for page in section.pages %}
+{% for p in section.pages %}
 <figure>
   <img src="{{ get_url(path=section.extra.img.src) }}" alt="{{ section.extra.img.alt }}" />
-  <figcaption>{{ page.content | safe }}</figcaption>
+  <figcaption>{{ p.content | safe }}</figcaption>
 </figure>
 {% endfor %}    
 </section>

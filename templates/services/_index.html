@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block head %}
+<style>
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
+  }
+  .service { padding: 1.5rem; border: 1px solid #e3e3e3; border-radius: 8px; }
+  .service h3 { margin: 0 0 .5rem; font-size: 1.15rem; }
+  .service__text p { margin: 0; color: #555; }
+</style>
+{% endblock head %}
+
+{% block content %}
+<ul class="services">
+  {% for p in section.pages %}
+    <li class="service">
+      <h3><a href="{{ p.permalink }}">{{ p.title }}</a></h3>
+      <div class="service__text">{{ p.content | safe }}</div>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
+ 
