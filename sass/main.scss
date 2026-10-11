@@ -59,5 +59,27 @@ header {
   }
 }
 
+section {
+  padding: 5rem 0;
+  & + section { border-top: 1px solid #ddd; }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $gap;
+  align-items: center;
+
+  @media (max-width: 700px) { grid-template-columns: 1fr; }
+
+  img { display: block; max-height: 400px; }
+}
+
+.two-col--flip > :first-child { order: 2; }
+
 ul { list-style: disc; padding-left: 1.5rem; }
 
