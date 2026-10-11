@@ -5,7 +5,7 @@
 <section class="two-col">
 {% for p in section.pages %}
 <figure>
-  <img src="{{ get_url(path=section.extra.img.src) }}" alt="{{ section.extra.img.alt }}" />
+  <img src="{{ get_url(path=p.extra.img.src) }}" alt="{{ p.extra.img.alt }}" />
   <figcaption>{{ p.content | safe }}</figcaption>
 </figure>
 {% endfor %}    
