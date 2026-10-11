@@ -1,20 +1,13 @@
 $max-width: 1440px;
 $gap: clamp(2rem, 6vw, 5rem);
 
+:root {
+  --gap: #{$gap};
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 a { color: inherit; }
-
-article {
-  h1 { margin-bottom: 1.5rem; font-size: 2rem; }
-  h2 { margin-top: 1.5rem; font-size: 1.5rem; }
-  h3 { margin-top: 1.5rem; }
-  p { margin-bottom: 1em; }
-}
-
-blockquote {
-  font-style: italic;
-}
 
 body {
   font-family: system-ui, sans-serif;
@@ -23,14 +16,6 @@ body {
   max-width: $max-width;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
-
-figure {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-
-  figcaption { text-align: center; font-size: 0.875rem; color: #888; margin-top: 0.5rem; }  
-  img { max-width: 100%; display: block; }
 }
 
 footer {
@@ -42,6 +27,20 @@ footer {
   font-size: 0.875rem;
   color: #888;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 2rem 0 .75rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-wrap: balance;
+}
+
+h1 { font-size: 2.5rem;   }  // 40px
+h2 { font-size: 2rem;     }  // 32px
+h3 { font-size: 1.5rem;   }  // 24px
+h4 { font-size: 1.25rem;  }  // 20px
+h5 { font-size: 1rem;     }  // 16px
+h6 { font-size: .875rem;  text-transform: uppercase; letter-spacing: .05em; }
 
 header {
   display: flex;
@@ -59,27 +58,7 @@ header {
   }
 }
 
-section {
-  padding: 5rem 0;
-  & + section { border-top: 1px solid #ddd; }
-
-  h2 {
-    margin-bottom: 1rem;
-  }
-}
-
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: $gap;
-  align-items: center;
-
-  @media (max-width: 700px) { grid-template-columns: 1fr; }
-
-  img { display: block; max-height: 400px; }
-}
-
-.two-col--flip > :first-child { order: 2; }
+p, ul, ol { margin: 0 0 1rem; }
 
 ul { list-style: disc; padding-left: 1.5rem; }
 
