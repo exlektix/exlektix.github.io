@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
+{% block head %}
+<style type="text/css">
+  .container { display: flex; justify-content: center; align-items: center; margin-top: 4rem; margin-left: 2rem; margin-right: 2rem; }
+  .tagline { font-family: var(--font-heading); }
+</style>
+{% endblock %}
+
 {% block content %}
-{% set home = get_section(path="home/_index.md") %}
-{% for p in home.pages %}
-  {% if p.extra.kind == "hero" %}
-    {% include "home/hero.html" %}
-  {% endif %}
-{% endfor %}
+  <div class="container">
+    <div class="tagline" style="font-size: 2.5rem">We help organizations that are seeking <b>long-term returns on investments in data and technology</b> rather than short-term gains alone.</div>
+  </div>
 {% endblock content %}

@@ -1,4 +1,3 @@
 base_url = "https://exlektix.com"
 build_search_index = false
 compile_sass = true
-title = "Exlektix"

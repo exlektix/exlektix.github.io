@@ -8,8 +8,7 @@ figure {
   margin-bottom: 1rem;
   margin-top: 1rem;
 
-  h4 { text-align: center; }  
-  .heading { margin-bottom: 0.5rem }
+  h4 { margin-bottom: 0.5rem; text-align: center; text-decoration: underline; }  
   img { margin-bottom: 1.5rem; max-height: 400px; max-width: 100%; display: block; }
 }
 
@@ -26,11 +25,11 @@ figure {
 {% endblock %}
 
 {% block content %}
-<h1 style="text-align: center">Team</h1>
+<h1 style="text-align: center;">Team</h1>
 <div class="figures">
 {% for p in section.pages %}
 <figure>
-  <h4 class="heading">{{ p.title }}</h4>
+  <h4>{{ p.title }}</h4>
   <img src="{{ get_url(path=p.extra.img.src) }}" alt="{{ p.extra.img.alt }}" />
   <figcaption>{{ p.content | safe }}</figcaption>
 </figure>

@@ -2,6 +2,8 @@ $max-width: 1440px;
 $gap: clamp(2rem, 6vw, 5rem);
 
 :root {
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Literata", Georgia, serif;
   --gap: #{$gap};
 }
 
@@ -10,7 +12,7 @@ $gap: clamp(2rem, 6vw, 5rem);
 a { color: inherit; }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
   max-width: $max-width;
@@ -33,6 +35,7 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
   line-height: 1.2;
   font-weight: 700;
   text-wrap: balance;
