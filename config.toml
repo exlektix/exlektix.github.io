@@ -1,3 +1,3 @@
-base_url = "https://exlektix.com"
+base_url = "https://exlektix.github.io"
 build_search_index = false
 compile_sass = true
