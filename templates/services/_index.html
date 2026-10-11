@@ -10,16 +10,18 @@
     list-style: none;
   }
   .service { padding: 1.5rem; border: 1px solid #e3e3e3; border-radius: 8px; }
-  .service h3 { margin: 0 0 .5rem; font-size: 1.15rem; }
+  .service h4 { text-align: center; margin-bottom: 1rem; text-decoration: underline;}
   .service__text p { margin: 0; color: #555; }
 </style>
 {% endblock head %}
 
 {% block content %}
+<h1 style="text-align: center">Services</h1>
+
 <ul class="services">
   {% for p in section.pages %}
     <li class="service">
-      <h3><a href="{{ p.permalink }}">{{ p.title }}</a></h3>
+      <h4>{{ p.title }}</h4>
       <div class="service__text">{{ p.content | safe }}</div>
     </li>
   {% endfor %}
