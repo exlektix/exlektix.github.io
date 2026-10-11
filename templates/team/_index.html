@@ -13,10 +13,10 @@ figure {
 }
 
 .figures {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gap);
   align-items: start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: var(--gap);
   margin-inline: auto;
   max-width: 64rem;
 }

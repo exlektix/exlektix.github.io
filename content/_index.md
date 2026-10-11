@@ -7,4 +7,4 @@ creditTitle = "The Orrery"
 src = "img/orrery.jpg"
 +++
 
-We help organizations that are seeking **long-term returns on investments in data and technology** rather than short-term gains alone.
+We help organizations that are seeking **long-term returns on investments in data and technology**.
